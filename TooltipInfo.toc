@@ -14,16 +14,17 @@
 Features\AFK.lua
 Features\Anchor.lua
 Features\Class.lua
+Features\Font.lua
 Features\Guild.lua
-Features\HonorLevel.lua
+#Features\HonorLevel.lua
 Features\ID.lua
 Features\ItemSource.lua
 Features\Level.lua
 Features\Macro.lua
-Features\MythicScore.lua
+#Features\MythicScore.lua
 Features\Race.lua
 Features\RaidIcon.lua
 Features\StatusBar.lua
-Features\Target.lua
+#Features\Target.lua
 
 Options.lua

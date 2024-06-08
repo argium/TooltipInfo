@@ -15,7 +15,7 @@ GameTooltipStatusBar.forceShow = true
 GameTooltipStatusBar.lockShow = 0
 GameTooltipStatusBar:HookScript("OnValueChanged", function(self, value)
     self:SetStatusBarColor(0, 1, 0)
-    
+
     if not value then
         return
     end
@@ -57,6 +57,10 @@ end)
 TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, function(tooltip)
     if tooltip:IsForbidden() then return end
     if tooltip ~= GameTooltip then return end 
+
+    -- disable entirely
+    GameTooltipStatusBar:SetHeight(0)
+    
     if GameTooltipStatusBar.TextString then
         local textWidth = GameTooltipStatusBar.TextString:GetStringWidth()
         if textWidth then
