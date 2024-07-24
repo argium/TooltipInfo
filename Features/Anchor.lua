@@ -45,7 +45,8 @@ local function OnUpdate(tooltip)
 end
 
 hooksecurefunc("GameTooltip_SetDefaultAnchor", function(tooltip, parent)
-    local frame = GetMouseFocus()
+    local frames = GetMouseFoci()
+    local frame = frames[0] -- TWW prepatch hotfix
 
     if frame == WorldFrame then
         if TooltipInfoDB["AnchorMode"] == 2 then
